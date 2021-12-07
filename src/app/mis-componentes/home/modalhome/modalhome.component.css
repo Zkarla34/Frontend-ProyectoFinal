@@ -1,0 +1,82 @@
+/*Modal boton*/
+.btn
+{
+    width: 100%;
+    height: 70px;
+    text-align: left;
+    font-style: oblique;
+    background-color: white;
+    border: 1px solid black;
+}
+
+/* Tarjeta del post*/
+.poster
+{
+    width: auto;
+    border-radius: 10px;
+}
+/*Descripción del poster*/
+.descripcion
+{
+    border: transparent;
+    width: 100%;
+    height: auto;
+    outline: transparent;
+    padding: 20px;
+    resize: none;
+}
+/*botones*/
+.butons{
+    height: 40px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+/*Botón para publicar*/
+.publicar
+{
+    text-align: center;
+    background-color: #FCA311;
+    border: transparent;
+    color: white;
+    font-style: oblique;
+    box-shadow: 2px 2px 1px 1px #e5e5e5;
+    transform-origin: bottom ;
+}
+.publicar:hover
+{
+    transform: translateY(-10px);
+    box-shadow: 1px 1px 2px 2px #FCA311;
+}
+
+/*Botón para subir foto*/
+.input-file
+{
+    background-color: #FCA311;
+    box-shadow: 2px 2px 1px 1px #e5e5e5;
+    width: 70px;
+}
+
+.input-file-input
+{
+    
+    padding: 2px;
+    display: none;
+}
+.input-boton
+{
+    cursor: pointer;
+    color: white;
+    align-content: baseline;
+    text-align:justify;
+    margin-left: 5px;
+    font-style: oblique;
+    padding: 4px;
+    padding-left: 15px;
+    width: auto;
+}
+.input-file:hover
+{
+    transform: translateY(-10px);
+    box-shadow: 1px 1px 2px 2px #FCA311;
+}

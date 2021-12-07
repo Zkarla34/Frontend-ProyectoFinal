@@ -1,0 +1,21 @@
+.navbar{
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background: turquoise;
+}
+.navbar-nav
+{
+	margin-left: 40%;
+}
+.logo > div
+{
+	width: 70px;
+	height:50px;
+	background: url('../../../assets/Img/Logotipo.png');
+	background-position:unset;
+	background-size: contain;
+	background-repeat: no-repeat;
+}

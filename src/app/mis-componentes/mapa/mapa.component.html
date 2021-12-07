@@ -1,0 +1,127 @@
+<app-header></app-header>
+  <!--ACORDEON-->
+  <section class="acordeon">
+    <div class="accordion" id="accordionExample">
+      <!--BALSISMO-->
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <div class="favoritos">
+              <div type="submit" class="btn estrella"><i class="far fa-2x fa-star" title="Añadir a favorito"></i></div>
+              <button class="btn btn-link btn-block text-left" style="color: black;"
+              type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" 
+              aria-controls="collapseOne" (click)="cambiarposicion(ubiBalsismo)" >BALSISMO
+            </button>
+          </div>
+          </h2>
+        </div>
+    
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            El descenso de ríos o balsismo, conocido mundialmente como rafting, es una actividad deportiva y recreativa que consiste en recorrer el río en la dirección de la corriente, por lo general sobre algún tipo de embarcación o balsa.
+          </div>
+        </div>
+      </div>
+      <!--ESCALADA-->
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <div class="favoritos">
+              <div type="submit" class="btn estrella"><i class="far fa-2x fa-star" title="Añadir a favorito"></i></div>
+                <button class="btn btn-link btn-block text-left" style="color: black;"
+                type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                aria-controls="collapseTwo" (click)="cambiarposicion(ubiEscalar)">ESCALADA
+                </button>
+            </div>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            La escalada es una actividad que consiste en realizar ascensos sobre paredes, valiéndose de la fuerza física propia. Se considera escalada todo ascenso con las extremidades inferiores y las extremidades superiores.           </div>
+        </div>
+      </div>
+      <!--PARACAIDISMO-->
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <div class="favoritos">
+              <div type="submit" class="btn estrella"><i class="far fa-2x fa-star" title="Añadir a favorito"></i></div>
+              <button class="btn btn-link btn-block text-left" style="color: black;"
+              type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" 
+              aria-controls="collapseThree" (click)="cambiarposicion(ubiParacaidismo)">PARACAIDISMO
+              </button>
+            </div>
+          </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            El paracaidismo es la técnica de lanzamiento desde cierta altura usando un paracaídas para amortiguar el impacto del aterrizaje. Se puede realizar desde cualquier aeronave como un avión, helicóptero, globo aerostático o desde un objeto fijo.</div>
+        </div>
+      </div>
+      <!--PARAPENTE-->
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <div class="favoritos">
+              <div type="submit" class="btn estrella"><i class="far fa-2x fa-star" title="Añadir a favorito"></i></div>
+              <button class="btn btn-link btn-block text-left" style="color: black;"
+              type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" 
+              aria-controls="collapseFour" (click)="cambiarposicion(ubiParapente)">PARAPENTE
+              </button>
+            </div>
+          </h2>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            El parapente es un deporte nacido a finales del siglo XX por la inventiva de montañeros que querían bajar volando mediante un paracaídas desde las cimas que habían ascendido. El ala, y a veces todo el equipo, se llama así con el mismo nombre, parapente. La definición técnica sería algo así: planeador ligero flexible.</div>
+        </div>
+      </div>
+      <!--PUENTISMO-->
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <div class="favoritos">
+              <div type="submit" class="btn estrella"><i class="far fa-2x fa-star" title="Añadir a favorito"></i></div>
+              <button class="btn btn-link btn-block text-left" style="color: black;"
+              type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" 
+              aria-controls="collapseFive" (click)="cambiarposicion(ubiPuentismo)">PUENTISMO
+              </button>
+            </div>
+          </h2>
+        </div>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            El puenting o la forma inglesa bungee jumping, en español puentismo, es una actividad en la cual una persona se lanza desde una altura elevada, con uno de los puntos de la cuerda elástica atada al torso o al tobillo, y el otro extremo sujetado al punto de partida del salto.</div>
+        </div>
+      </div>
+      <!--TIROLESA-->
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <div class="favoritos">
+              <div type="submit" class="btn estrella"><i class="far fa-2x fa-star" title="Añadir a favorito"></i></div>
+              <button class="btn btn-link btn-block text-left" style="color: black;"
+              type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" 
+              aria-controls="collapseSix"(click)="cambiarposicion(ubiTirolesa)">TIROLESA
+              </button>
+            </div>
+          </h2>
+        </div>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            Una tirolesa, tirolina, dosel, canopi, canopy, cable o zip line​ consiste en una polea suspendida por cables montados en un declive o inclinación.</div>
+        </div>
+      </div>
+    </div>
+    <!--MAPA-->
+  </section>
+    <google-map class="map" id="map" [center]="position" [zoom]="zoom">
+      <map-marker 
+      *ngFor="let marker of markers"
+      [position]="marker.position"
+      [label]="marker.label"
+      [title]="marker.title"
+      [options]="marker.options"
+      >
+      </map-marker>
+    </google-map>

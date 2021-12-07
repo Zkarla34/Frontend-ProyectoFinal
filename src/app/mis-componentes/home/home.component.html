@@ -1,0 +1,35 @@
+<!--Encabezado-->
+<app-header></app-header>
+<!--Nuevas publicaciones-->
+<section class="newposter">
+    <div><!--Modal nueva publicación-->
+        <app-modalhome></app-modalhome> 
+    </div>
+</section>
+<!--Publicaciones hechas   fa-heart-->
+<section class="postmade">
+    <div class="card mb-3" *ngFor="let item of datos">
+        <div class="img1"></div>
+        <div class="card-body">
+          <div class="pt-3"><a href=""></a><i class="fa fa-2x" aria-hidden="true"></i></div>
+          <h5 class="card-title">Pepito Perez</h5>
+          <p class="card-text">
+            Una tarde increible con mis amigos y adrenalina! 
+          </p>
+          <p class="card-text">
+            <small class="text-muted">01/12/2021</small>
+          </p>
+        </div>
+    </div>
+</section>
+
+<!--Publicidad-->
+<aside class="publicity">
+    <div class="card" *ngFor="let item of data" >
+        <div class="card-body">
+            <img class="img-fluid" src="{{item.imgUrl}}">
+            <a [routerLink]="['/planes']" >{{item.nombre}} - Precio: {{item.precio | currency}} COP </a>
+        </div>
+    </div>
+</aside>
+

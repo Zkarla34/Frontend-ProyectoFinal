@@ -1,0 +1,64 @@
+<button class=" comenzar " (click)="open(mymodal)">Comenzar</button>
+<ng-template #mymodal let-modal ngModelOptions>
+  <div class="modal-body"> 
+      <!--FORMULARIO INICIO DE SESIÓN-->
+    <!-- Pills navs -->
+    <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="tab-login" data-mdb-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login" aria-selected="true">Iniciar Sesión</a>
+        </li>
+        <li class="nav-item " role="presentation">
+            <a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="#pills-register" role="tab" aria-selected="false">Registrate</a>
+        </li>
+    </ul>
+    <!-- Pills content -->
+    <div class="tab-content">
+        <div class="tab-pane active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+            <div class="form-group">
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <input type="email" id="loginEmail" class="form-control"  name="loginEmail" 
+                    [(ngModel)]="login.email" />
+                    <label class="form-label" for="loginName">Correo electrónico</label>
+                </div>
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <input type="password" id="loginPassword" class="form-control"  name="loginPassword" 
+                    [(ngModel)]="login.password"/>
+                    <label class="form-label" for="loginPassword" >Contraseña</label>
+                </div>
+                <!--OLVIDASTE TU CONTRASEÑA-->
+                <!--<div class="col-md-6 d-flex justify-content-center">
+                    <a href="#!">¿Olvidaste tu contraseña?</a>
+                </div>-->
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-block mb-4"   (click)="IniciarSesion(login)">Ingresar</button>
+            </div>
+        </div>
+        <!--FORMULARIO REGISTRO-->
+        <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+            <div class="form-group">
+                <div class="text-center mb-3">
+                    <!-- Username input -->
+                    <div class="form-outline mb-4">
+                        <input type="text" id="registerUsername" class="form-control"  [(ngModel)]="registro.nombre">
+                        <label class="form-label" for="registerUsername">Nombre</label>
+                    </div>
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <input type="email" id="registerEmail" class="form-control"   [(ngModel)]="registro.email">
+                        <label class="form-label" for="registerEmail">Correo electrónico</label>
+                    </div>
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <input type="password" id="registerPassword" class="form-control"   [(ngModel)]="registro.password">
+                        <label class="form-label" for="registerPassword">Contraseña</label>
+                    </div>
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-block mb-4" (click)="Registro(registro)">Hecho</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</ng-template>

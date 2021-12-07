@@ -1,0 +1,49 @@
+.comenzar
+{
+    color: black;
+    border:black solid 1px;
+    box-shadow: 0px 2px 3px 3px black;
+    background-color: white;
+    opacity: 0.5;
+    font-style: oblique;
+    font-size:large;
+    height: 40px;
+	width: 220px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.comenzar:hover
+{
+    background: linear-gradient(180deg, rgb(255, 254, 255) 0%, rgb(252, 153, 17));
+    transform: translateX(5px);
+}
+/*.modal-body
+{
+    background-color: black;
+    backdrop-filter: blur(5px);
+
+}*/
+/*Botones inicio y registro*/
+.nav-link
+{
+ background-color: #FCA311;
+ box-shadow: 0px 3px 0px 3px #0000;
+}
+#tab-login 
+{
+    background-color: #fca211de;
+}
+#tab-register
+{
+    background-color: #fca211de;
+}
+.form-control
+{
+    color:black;
+    border-bottom: black solid 1px;
+    border-radius: 0px;
+}
+.btn
+{
+    background-color: #fca211de;
+}

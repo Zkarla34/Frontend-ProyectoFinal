@@ -1,0 +1,20 @@
+/* footer */
+footer{
+    background-color: black;  
+    height: 100px;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    position:fixed;
+}
+footer div p{
+	color: #fff; 
+}
+span
+{
+    color: lightblue;
+}
+.elements{
+
+	padding: 30px;
+}

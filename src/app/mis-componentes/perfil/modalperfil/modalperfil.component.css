@@ -1,0 +1,47 @@
+.buton{
+    background-color: white;
+    border: transparent;
+    
+}
+.buton:hover{
+    color: #75819b;
+    text-decoration: underline;
+}
+.form-control
+{
+    color:black;
+    border-bottom: black solid 1px;
+    border-radius: 0px;
+}
+.btn
+{
+    background-color: #fca211de;
+}
+/*Botón para subir foto*/
+.input-file
+{
+    width: 80px;
+    height: 100px;
+    width: 100px;
+    border: black 1px solid;
+    box-shadow: 0px 2px 3px 1px black;
+    margin-left: 40%;
+    border-radius: 50px;
+}
+.input-file-input
+{
+    padding: 2px;
+    display: none;
+}
+.input-boton
+{
+    cursor: pointer;
+    color: black;
+    align-content: baseline;
+    text-align:center;
+    font-style: oblique;
+    padding: 4px;
+    padding-left: 10px;
+    width: auto;
+    margin-top: 25px;
+}

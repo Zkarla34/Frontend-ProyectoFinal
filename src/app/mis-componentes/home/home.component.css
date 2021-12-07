@@ -1,0 +1,34 @@
+/*Nueva publicaión*/
+.newposter
+{
+    margin-top: 8%;
+    width: 60%;
+    height: 80px;
+    border-radius: 15px;
+    margin-left: 3%;
+}
+/*Postes hechos*/
+.postmade
+{
+    margin-top: 20px;
+    width: 60%;
+    float: left;
+    margin-left: 3%;
+}
+/*Sección de publicidad*/
+.publicity
+{
+    width: 35%;
+    margin-left: 5px;
+    float: right;
+    margin-top: 19px;
+}
+/*Planes de la publicidad - cartas*/
+.publicity .card
+{
+    margin-top: inherit;
+    width:90%;
+    align-content: right;
+    margin-left: 5%;
+    margin-top:5px;
+}

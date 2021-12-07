@@ -1,0 +1,17 @@
+<!--Botón del modal para nuevo post-->
+<button class="btn btn-lg" (click)="open(mymodal)">Cuentanos tu experiencia...</button>
+<ng-template #mymodal let-modal>
+    <section class="poster">
+        <textarea class="descripcion" type="text" placeholder="Cuentanos tu experiencia..."
+        cols="30"  minlength="50" name="descripcion" required 
+         autofocus></textarea>
+        <hr>
+        <div class="butons">
+            <div class="input-file">
+                <input type="file" id="file" class="input-file-input " >
+                <label for="file" class="input-boton">Fotos</label>
+            </div>
+            <button class="publicar"  (click)="modal.close()">Publicar </button>
+        </div>
+    </section>
+</ng-template>
