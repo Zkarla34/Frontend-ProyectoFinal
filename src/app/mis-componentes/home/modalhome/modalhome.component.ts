@@ -1,5 +1,6 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { PostService } from 'src/app/servicios/post.service';
 
 @Component({
   selector: 'app-modalhome',
@@ -8,7 +9,10 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 })
 export class ModalhomeComponent implements OnInit {
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal, public post:PostService) { }
+
+  nombre:string = 'Pepito Perez'
+  descripcion:string = ''
 
   ngOnInit(): void {
   }
@@ -33,4 +37,19 @@ export class ModalhomeComponent implements OnInit {
     }
   }
 
+ datos:any[] = []
+Guardar()
+  {
+    var post = {
+      host:this.post.urlLocal,
+      path:'/Post/Guardar',
+      data:{
+        descripcion: this.descripcion
+      }
+    }
+    this.post.Post(post.host + post.path, post.data).then((res:any) =>{
+    console.log(res)
+    this.datos = res
+    })
+  }
 }

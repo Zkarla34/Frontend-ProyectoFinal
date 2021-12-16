@@ -10,28 +10,31 @@ export class HomeComponent implements OnInit {
 
   constructor(private peticion:PostService) { }
 
+  descripcion:string = '';
+  usuario:string = '';
+
   ngOnInit(): void {
     this.listar()
   }
 
   data:any[] = [
     {
-      "nombre": "Salto de Bungee Jumping 40 m.",
+      "nombre": "Bici Camping Embalse del Neusa",
       "descripcion": "A dos horas de Bogota, a 30 minutos de Tunja y a 15 minutos del Puente de Boyaca, se encuentra un bello escenario natural, el antiguo puente férreo conocido como El Puenton  un clásico puente en piedra con 40 metros de altura que pondrán a prueba TODOS tus sentidos",
-      "precio": 130000,
+      "precio": 80000,
       "imgUrl": "../../../assets/Img/Ciclismo-Mountain.jpg"
     },
     {
-      "nombre": "Bici Camping Embalse del Neusa",
+      "nombre": "Paracaidismo",
       "descripcion": "El Embalse del Neusa se encuentra ubicado en el Municipio de Cogua  a 55 km de Bogotá  y a 15 km de Zipaquirá, propicio escenario para actividades de camping, ciclomontañismo o Mountain Bike , Trekking o caminatas.",
-      "precio": 150000,
-      "imgUrl": "../../../assets/Img/Ciclismo-Mountain.jpg"
+      "precio": 300000,
+      "imgUrl": "../../../assets/Img/paracaidismo.jpeg"
     },
     {
-      "nombre": "Bici Camping Embalse del Neusa",
+      "nombre": "Tirolesa",
       "descripcion": "El Embalse del Neusa se encuentra ubicado en el Municipio de Cogua  a 55 km de Bogotá  y a 15 km de Zipaquirá, propicio escenario para actividades de camping, ciclomontañismo o Mountain Bike , Trekking o caminatas.",
-      "precio": 150000,
-      "imgUrl": "../../../assets/Img/Ciclismo-Mountain.jpg"
+      "precio": 240000,
+      "imgUrl": "../../../assets/Img/tiroless.jpeg"
     }
   ]
 
@@ -46,8 +49,8 @@ export class HomeComponent implements OnInit {
       data:{}
     }
     this.peticion.Post(post.host + post.path, post.data).then((res:any) =>{
-      console.log(res)
-      this.datos = res
+    console.log(res)
+    this.datos = res
     })
   }
 }

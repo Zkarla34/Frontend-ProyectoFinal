@@ -1,5 +1,8 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+
+import { MensajesService } from 'src/app/servicios/mensajes.service';
 import { PerfilService } from 'src/app/servicios/perfil.service';
 import { UserService } from 'src/app/servicios/user.service';
 
@@ -11,7 +14,7 @@ import { UserService } from 'src/app/servicios/user.service';
 })
 export class ModalComponent implements OnInit {
 
-  constructor(private modalService: NgbModal, private peticion:UserService, private logueado:PerfilService ) { }
+  constructor(private modalService: NgbModal, private peticion:UserService, private logueado:PerfilService, private msg:MensajesService, private router:Router ) { }
 
   registro:any = 
     {
@@ -41,7 +44,7 @@ open(content:TemplateRef <any>) {
   });
 }
 
-private getDismissReason(reason: any): string {
+public getDismissReason(reason: any): string {
   if (reason === ModalDismissReasons.ESC) {
     return 'by pressing ESC';
   } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
@@ -50,6 +53,8 @@ private getDismissReason(reason: any): string {
     return  `with: ${reason}`;
   }
 }
+
+
 IniciarSesion(datos:any)
   {
     console.log(datos)
@@ -62,11 +67,24 @@ IniciarSesion(datos:any)
         password:datos.password
         }
      }
-   console.log(post)
+
+     console.log(post)
+     localStorage.setItem('datospersona', JSON.stringify(post));
 
       this.peticion.Post(post.host + post.path, post.data).then((res:any) =>{
       console.log(res)
+      localStorage.setItem('nombre', res.nombre)
+      localStorage.setItem('email', datos.email)
+      if(res.state == false){
+        this.msg.load(res.mensaje, 'danger')
+      }else{
+        this.msg.load(res.mensaje)
+        this.router.navigateByUrl('home');
+       this.modalService.dismissAll()
+       
+      }
       this.logueado.logueado = res.state
+      
      })
   }
 
@@ -87,6 +105,15 @@ IniciarSesion(datos:any)
 
     this.peticion.Post(post.host + post.path, post.data).then((res:any) =>{
     console.log(res)
+    if(res.state == false){
+      this.msg.load(res.mensaje, 'danger')
+    }else{
+      this.msg.load(res.mensaje)
+      this.router.navigateByUrl('home');
+      this.modalService.dismissAll()
+    }
    })
   }
 }
+
+

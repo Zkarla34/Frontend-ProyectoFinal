@@ -6,12 +6,14 @@
         cols="30"  minlength="50" name="descripcion" required 
          autofocus></textarea>
         <hr>
-        <div class="butons">
-            <div class="input-file">
-                <input type="file" id="file" class="input-file-input " >
-                <label for="file" class="input-boton">Fotos</label>
+        <div>
+            <div class="butons">
+                <!-- <div class="input-file">
+                    <input type="file" id="file" class="input-file-input " >
+                    <label for="file" class="input-boton">Fotos</label>
+                </div> -->
+                <button class="publicar"  (click)="modal.close()">Publicar </button>
             </div>
-            <button class="publicar"  (click)="modal.close()">Publicar </button>
         </div>
     </section>
 </ng-template>

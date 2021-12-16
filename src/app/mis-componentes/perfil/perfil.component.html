@@ -2,25 +2,22 @@
 <!--Información del usuario-->
 <div class="userI">
     <div class="nomYeditar">
-        <p>{{usuario | json}}</p>
+        <p>{{nombre}}</p>
         <app-modalperfil></app-modalperfil>
     </div>
-    <!-- <div class="foto">
-        <img src="" alt="Foto de perfil">
-    </div> -->
+     <div class="foto">
+        <img class="photo" src="../../assets/Img/Captura.PNG">
+    </div> 
 </div>
 <!--Publicaciones del usuario-->
     <div class="row row-cols-1 row-cols-md-2 g-4">
-        <div class="col">
+        <div class="col" *ngFor="let item of datos">
           <div class="card">
             <div class="juanita"></div>
             <div class="card-body">
-              <h5 class="card-title">Juana Perez</h5>
+              <h5 class="card-title">{{item.usuario}}</h5>
               <p class="card-text">
-                Un día bien merecido despues de tanto trabajo!
-              </p>
-              <p class="card-text">
-                <small class="text-muted">03/12/2021</small>
+                {{item.descripcion}}
               </p>
             </div>
           </div>

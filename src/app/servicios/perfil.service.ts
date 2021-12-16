@@ -7,5 +7,6 @@ export class PerfilService {
 
   constructor() { }
   public logueado:boolean = false;
-  public nombreUsuario:string ='';
+  public nombreUsuario:string ='Pepito Perez';
+  public correo:string ='pepito@gmail.com'; 
 }

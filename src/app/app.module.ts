@@ -20,6 +20,9 @@ import { PerfilComponent } from './mis-componentes/perfil/perfil.component';
 import { ModalperfilComponent } from './mis-componentes/perfil/modalperfil/modalperfil.component';
 import { MapaComponent} from './mis-componentes/mapa/mapa.component';
 import { CarritoComponent } from './mis-componentes/carrito/carrito.component';
+import { MensajesComponent } from './mis-componentes/mensajes/mensajes.component';
+
+
 
 
 @NgModule({
@@ -36,7 +39,8 @@ import { CarritoComponent } from './mis-componentes/carrito/carrito.component';
     PerfilComponent,
     ModalperfilComponent,
     MapaComponent,
-    CarritoComponent
+    CarritoComponent,
+    MensajesComponent
   ],
   imports: [
     BrowserModule,

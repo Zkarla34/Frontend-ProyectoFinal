@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CarritoService } from 'src/app/servicios/carrito.service';
+import { MensajesService } from 'src/app/servicios/mensajes.service';
 
 @Component({
   selector: 'app-carrito',
@@ -8,7 +9,7 @@ import { CarritoService } from 'src/app/servicios/carrito.service';
 })
 export class CarritoComponent implements OnInit {
 
-  constructor(public carrito:CarritoService) { }
+  constructor(public carrito:CarritoService, public msg:MensajesService) { }
 
   ngOnInit(): void {
   }
@@ -17,6 +18,7 @@ export class CarritoComponent implements OnInit {
   {
     console.log(id)
     this.carrito.eliminar(id)
+    this.msg.load('Elemento eliminado correctamente')
   }
 
 }

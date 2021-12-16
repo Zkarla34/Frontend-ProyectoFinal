@@ -1,21 +1,4 @@
 <app-header></app-header>
-<section class="turism" >
-    <div class="card mb-3" style="max-width: 540px;" *ngFor="let item of data" >
-        <div class="row g-0" >
-          <div class="col-md-4">
-            <img class="img-fluid" src="{{item.imgUrl}}">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">{{item.nombre}}</h5>
-              <p class="card-text">{{item.descripcion}}</p>
-              <p class="card-text">Precio: {{item.precio | currency}} COP</p>
-              <button type="submit" class="btn btn-block mb-4" (click)="agregar(item)" [routerLink]="['/carrito']">Agregar al Carrito de compras</button>
-            </div>
-          </div>
-        </div>
-    </div>
-</section>
 
 <section class="turism">
   <div class="card mb-3" style="max-width: 540px;" *ngFor="let item of data">

@@ -2,21 +2,29 @@
 {
     padding: 0;
     margin-bottom: 0;
-}.turism
+}
+.turism
 {
     margin-top: 7%;
     width: 100%;
     height: auto;
     background-color: #e5e5e5;
-    display: flex;
-    justify-content: space-between;
+    display: flex; 
+    justify-content: center; 
     padding: 5px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: block;
+    margin-left: 25%;
+    /* align-content: stretch; */
+    /* align-items: center; */
 }
+
 .card
 {
     align-items: center;
-    width: 860px;
-    height: 25em;
+    width: 730px;
+    height: 70%;
     margin-top: 20px;
     box-shadow: 0px 1px 5px 1px black;
     margin-left: 8px;

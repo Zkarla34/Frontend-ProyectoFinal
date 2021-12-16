@@ -10,6 +10,10 @@ export class ModalperfilComponent implements OnInit {
 
   constructor(private modalService: NgbModal) { }
 
+
+  nombreUsuario:string='Pepito Perez';
+  correo:string='pepito@gmail.com';
+  
   ngOnInit(): void {
   }
 
